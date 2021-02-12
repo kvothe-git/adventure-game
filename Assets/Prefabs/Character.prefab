@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262221952}
-  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7806808976198442727}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &262221956
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -90,10 +90,10 @@ GameObject:
   - component: {fileID: 7806808976198442727}
   - component: {fileID: 7806808976284500517}
   - component: {fileID: 7806808976284500514}
-  - component: {fileID: 7806808976284500515}
   - component: {fileID: 7806808976284500512}
+  - component: {fileID: 4373792419373928622}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7806808976284500513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -224,55 +224,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &7806808976284500515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7806808976284500513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fdf7034454d1f047a56c91d87d2b33a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInputSpace: {fileID: 0}
-  ball: {fileID: 262221953}
-  ballRadius: 0.5
-  ballAlignSpeed: 180
-  ballAirRotation: 0.5
-  ballSwimRotation: 2
-  maxSpeed: 10
-  maxClimbSpeed: 2
-  maxSwimSpeed: 4
-  maxAcceleration: 20
-  maxAirAcceleration: 3
-  maxClimbAcceleration: 20
-  maxSwimAcceleration: 5
-  jumpHeight: 3
-  maxAirJumps: 0
-  maxGroundAngle: 30
-  maxStairsAngle: 50
-  maxClimbAngle: 120
-  submergenceOffset: 0.5
-  submergenceRange: 1
-  waterDrag: 1
-  buoyancy: 1.1
-  swimThreshold: 0.5
-  maxSnapSpeed: 10
-  probeDistance: 1
-  probeMask:
-    serializedVersion: 2
-    m_Bits: 1075
-  stairsMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  climbMask:
-    serializedVersion: 2
-    m_Bits: 1075
-  waterMask:
-    serializedVersion: 2
-    m_Bits: 16
 --- !u!54 &7806808976284500512
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -289,3 +240,53 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &4373792419373928622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7806808976284500513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f0e77ba7e3f3f41b5117b4c851ef6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSaveData: {fileID: 11400000, guid: 1c81a445de3c6f246ab85e0ef7899d73, type: 2}
+  playerInputSpace: {fileID: 0}
+  model: {fileID: 262221953}
+  modelAlignSpeed: 270
+  maxSpeed: 10
+  maxClimbSpeed: 2
+  maxSwimSpeed: 4
+  maxAcceleration: 20
+  maxAirAcceleration: 5
+  maxClimbAcceleration: 40
+  maxSwimAcceleration: 5
+  jumpHeight: 3
+  maxAirJumps: 0
+  maxGroundAngle: 30
+  maxStairsAngle: 50
+  maxClimbAngle: 140
+  maxSnapSpeed: 100
+  probeDistance: 1
+  submergenceOffset: 0.5
+  submergenceRange: 1
+  buoyancy: 1.1
+  waterDrag: 1
+  swimThreshold: 0.5
+  probeMask:
+    serializedVersion: 2
+    m_Bits: 1331
+  stairsMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  climbMask:
+    serializedVersion: 2
+    m_Bits: 1331
+  waterMask:
+    serializedVersion: 2
+    m_Bits: 16
+  normalMaterial: {fileID: 2100000, guid: 0e08a4a373f1adb4399ddb0c3eaac88d, type: 2}
+  climbingMaterial: {fileID: 2100000, guid: 0e08a4a373f1adb4399ddb0c3eaac88d, type: 2}
+  swimmingMaterial: {fileID: 2100000, guid: 0e08a4a373f1adb4399ddb0c3eaac88d, type: 2}
