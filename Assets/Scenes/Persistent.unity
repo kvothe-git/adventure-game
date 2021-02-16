@@ -279,6 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resettableScriptableObjects:
   - {fileID: 11400000, guid: 1c81a445de3c6f246ab85e0ef7899d73, type: 2}
+  - {fileID: 11400000, guid: d599d19a2cf0c0f4bb276edf2a1bea88, type: 2}
 --- !u!4 &845189975
 Transform:
   m_ObjectHideFlags: 0
@@ -563,6 +564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1758532006}
   - component: {fileID: 1758532005}
+  - component: {fileID: 1758532007}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -602,6 +604,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1758532007
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758532004}
+  m_Enabled: 1
 --- !u!1 &2100011672
 GameObject:
   m_ObjectHideFlags: 0

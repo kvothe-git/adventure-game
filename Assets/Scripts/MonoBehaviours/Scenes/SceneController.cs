@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] private event Action BeforeSceneUnload;
-    [SerializeField] private event Action AfterSceneLoad;
+    public event Action BeforeSceneUnload;
+    public event Action AfterSceneLoad;
+
     [SerializeField] private CanvasGroup faderCanvasGroup;
     [SerializeField] private float fadeDuration = 1f;
     [SerializeField] private string startingSceneName = "Playground";

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playground.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/HollowShpere.unity
+    guid: 75eb1d41a4ec667449374d12606917d9
   m_configObjects: {}
